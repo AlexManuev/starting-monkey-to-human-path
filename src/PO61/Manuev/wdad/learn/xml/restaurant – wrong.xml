@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<restaurant>
+    <date day="10" month="10" year="2010">
+        <order>
+            <item/>
+            <item/>
+            <officiant firstname="Gonsales" secondname="ivanov"/>
+            <totalcost>10</totalcost>
+        </order>
+    </date>
+</restaurant>

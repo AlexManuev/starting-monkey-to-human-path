@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE restaurant SYSTEM "restaurant.dtd">
+<restaurant>
+    <date day="18" month="09" year="2018">
+        <order>
+            <item name="taco" cost="10"/>
+            <item name="tequila" cost="10"/>
+            <officiant firstname="Esteban" secondname="ivanov"/>
+            <totalcost>20</totalcost>
+        </order>
+        <order>
+            <item name="enchiladas" cost="15"/>
+            <item name="extra tabasco" cost="3"/>
+            <officiant firstname="Pablo" secondname="sidorov"/>
+        </order>
+    </date>
+    <date day="19" month="09" year="2018">
+        <order>
+            <item name="taco" cost="5"/>
+            <item name="tequila" cost="10"/>
+            <item name="salsa" cost="7"/>
+            <officiant firstname="Gonsales" secondname="ivanov"/>
+            <totalcost>23</totalcost>
+        </order>
+    </date>
+</restaurant>
