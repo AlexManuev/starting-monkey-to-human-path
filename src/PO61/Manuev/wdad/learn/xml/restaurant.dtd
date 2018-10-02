@@ -13,8 +13,7 @@
                 year CDATA #REQUIRED>
         <!ATTLIST officiant
                 firstname CDATA #IMPLIED
-                secondname
-                petrov|ivanov|sidorov #REQUIRED>
+                secondname (petrov|ivanov|sidorov) #REQUIRED>
         <!ATTLIST item
                 name CDATA #REQUIRED
                 cost CDATA #REQUIRED>
