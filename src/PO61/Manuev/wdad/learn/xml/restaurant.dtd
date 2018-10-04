@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
-        <!ELEMENT restaurant (date*)>
-        <!ELEMENT date (order*)>
-        <!ELEMENT order (officiant?, item*, totalcost?)>
-        <!ELEMENT officiant EMPTY>
-        <!ELEMENT item EMPTY>
-        <!ELEMENT totalcost (#PCDATA)>
-
-        <!ATTLIST date
-                day CDATA #REQUIRED
-                month CDATA #REQUIRED
-                year CDATA #REQUIRED>
-        <!ATTLIST officiant
-                firstname CDATA #IMPLIED
-                secondname (petrov|ivanov|sidorov) #REQUIRED>
-        <!ATTLIST item
-                name CDATA #REQUIRED
-                cost CDATA #REQUIRED>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><appconfig>
+    <rmi>
+        <server>
+            <registry>
+                <createregistry>no</createregistry>
+                <registryaddress>localhost</registryaddress>
+                <registryport>8888</registryport>
+            </registry>
+        </server>
+        <client>
+            <policypath>client.policy2</policypath>
+            <usecodebaseonly>yes</usecodebaseonly>
+        </client>
+        <classprovider>http://www.po.free.ru/cp/cp.jar</classprovider>
+    </rmi>
+</appconfig>

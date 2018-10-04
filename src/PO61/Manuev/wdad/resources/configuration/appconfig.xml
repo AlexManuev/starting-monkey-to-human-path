@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE appconfig [
+        <!ELEMENT appconfig (rmi)>
+        <!ELEMENT rmi (server, client, classprovider?)>
+        <!ELEMENT server ((registry, bindedobject*)+)>
+        <!ELEMENT registry (createregistry, registryaddress, registryport)>
+        <!ELEMENT client (policypath, usecodebaseonly)>
+
+        <!ELEMENT createregistry (#PCDATA)>
+        <!ELEMENT registryaddress (#PCDATA)>
+        <!ELEMENT registryport (#PCDATA)>
+        <!ELEMENT bindedobject EMPTY>
+        <!ELEMENT policypath (#PCDATA)>
+        <!ELEMENT usecodebaseonly (#PCDATA)>
+        <!ELEMENT classprovider (#PCDATA)>
+
+        <!ATTLIST bindedobject
+                name CDATA #REQUIRED
+                class CDATA #REQUIRED>]>
+<appconfig>
+    <rmi>
+        <server>
+            <registry>
+                <createregistry>yes</createregistry>
+                <registryaddress>localhost</registryaddress>
+                <registryport>1099</registryport>
+            </registry>
+        </server>
+        <client>
+            <policypath>client.policy2</policypath>
+            <usecodebaseonly>no</usecodebaseonly>
+        </client>
+        <classprovider>http://www.yourhost.free.ru/cp/cp.jar</classprovider>
+    </rmi>
+</appconfig>
