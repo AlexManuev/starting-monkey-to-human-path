@@ -70,7 +70,7 @@ public class XmlTask {
             return element;
     }
 
-    private int calculateItems(Element order) throws TransformerException {
+    private int calculateItems(Element order) throws TransformerException { //todo rename (totalcost)
         NodeList nodelist = order.getElementsByTagName("item");
         Element element;
         int counter = 0;
@@ -78,13 +78,14 @@ public class XmlTask {
             element = (Element) nodelist.item(i);
             counter += Integer.valueOf(element.getAttribute("cost"));
         }
-        try {
+        try {               //todo переделать без if и try catch по другому (тупо вызывать тоталкост без лишних условий)
             if (counter != Integer.valueOf(order.getElementsByTagName("totalcost").item(0).getTextContent())) {
                 setTotalCost(order, counter);
             }
         } catch (NullPointerException e) {
             setTotalCost(order, counter);
         }
+        saveXML(); //todo проверить
         return counter;
     }
 
@@ -92,11 +93,10 @@ public class XmlTask {
         try {
             order.getElementsByTagName("totalcost").item(0).setTextContent(String.valueOf(totalCost));
         } catch (NullPointerException e) {
-            Element element = document.createElement("totalcost");
+            Element element = document.createElement("totalcost");       //todo переделать
             element.setTextContent(String.valueOf(totalCost));
             order.appendChild(element);
         }
-        saveXML();
 
     }
 
